@@ -1,21 +1,22 @@
-#include <iostream>
-#include <string>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main() {
+int main()
+{
     int n;
-    cin >> n;
-    int x = 0;
-    for (int i = 0; i < n; ++i) {
-        string statement;
-        cin >> statement;
-        if (statement.find("++")) {
-            x++;
+    int c=0;
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        string s;
+        cin>>s;
+        if(s[1]=='+')
+        {
+            c++;
         }
-        else if (statement.find("--")) {
-            x--;
+        else if(s[1]=='-')
+        {
+            c--;
         }
     }
-    cout << x << endl;
-    return 0;
+    cout<<c<<endl;
 }
